@@ -10,7 +10,7 @@ export default function PrecipitationMap() {
           <span className="material-symbols-outlined">layers</span>
         </button>
       </div>
-      <div className="flex-grow relative bg-surface-container dark:bg-inverse-surface overflow-hidden rounded-b-[24px]">
+      <div className="flex-grow relative bg-surface-container overflow-hidden rounded-b-[24px]">
         <img
           className="w-full h-full object-cover"
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNkvSHo3U641ex1DwhrPxYD2D_VNih5S7wPdpxV7-7eUnpVZxMF5ZGhzsG_jmWP_-wew4kHeZqMr0glvlUVgdlIMh9JCrG0MwAIWpC47PvGYi30KyS0Ph2rG8zyvZs7LPGaz3ou9crzq_RXYaw2DEJfFX7t-by4kM7A1ZbLBcmAbWrbMtWA5EFB_9_xw-fXrvjCaqE-v2i_CgGUI1MefFoAwvLqYhs46zSp64qQpJexaUiwgktXmw"

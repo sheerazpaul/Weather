@@ -17,7 +17,7 @@ export default function DailyForecast() {
         {days.map((day, i) => (
           <div
             key={day.date}
-            className="flex items-center justify-between p-4 rounded-2xl hover:bg-white/30 dark:hover:bg-white/5 transition-colors group"
+            className="flex items-center justify-between p-4 rounded-2xl hover:bg-white/30 transition-colors group"
           >
             <div className="flex items-center gap-5 w-1/3">
               <span className="text-base font-medium w-28">

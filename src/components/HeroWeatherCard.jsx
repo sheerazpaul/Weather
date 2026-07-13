@@ -4,7 +4,7 @@ import { getWeatherIconUrl, formatTime } from '../api/weather';
 
 export default function HeroWeatherCard() {
   const { weather } = useWeather();
-  const { convertTemp } = useSettings();
+  const { convertTemp, tempSymbol } = useSettings();
 
   if (!weather) return null;
 
@@ -28,7 +28,7 @@ export default function HeroWeatherCard() {
           <span className="text-8xl md:text-[96px] font-bold weather-text-gradient leading-none tracking-tight">
             {convertTemp(weather.main.temp)}&deg;
           </span>
-          <span className="text-3xl text-on-surface-variant opacity-50 font-light">C</span>
+          <span className="text-3xl text-on-surface-variant opacity-50 font-light">{tempSymbol}</span>
         </div>
         <div className="flex flex-col gap-1.5 mt-4">
           <span className="text-2xl font-semibold text-on-surface capitalize">

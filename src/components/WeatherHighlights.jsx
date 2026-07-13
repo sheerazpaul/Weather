@@ -29,9 +29,9 @@ export default function WeatherHighlights() {
         </div>
         <div className="relative w-full h-16 my-3">
           <svg className="w-full h-full overflow-visible" viewBox="0 0 100 40">
-            <path d="M0,40 Q50,-10 100,40" fill="none" stroke="#e1e2ec" strokeWidth="2" />
-            <path className="sun-path" d="M0,40 Q50,-10 70,12" fill="none" stroke="#0057c2" strokeWidth="2.5" />
-            <circle cx="70" cy="12" fill="#0057c2" r="3" />
+            <path d="M0,40 Q50,-10 100,40" fill="none" stroke="currentColor" className="text-outline-variant" strokeWidth="2" />
+            <path className="sun-path text-primary" d="M0,40 Q50,-10 70,12" fill="none" stroke="currentColor" strokeWidth="2.5" />
+            <circle cx="70" cy="12" fill="currentColor" className="text-primary" r="3" />
           </svg>
         </div>
         <div className="flex justify-between items-end">

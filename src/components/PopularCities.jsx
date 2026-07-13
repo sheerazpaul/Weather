@@ -13,7 +13,7 @@ export default function PopularCities() {
           <button
             key={city}
             onClick={() => fetchWeather(city)}
-            className="glass-card w-full p-5 flex items-center justify-between cursor-pointer hover:bg-white/60 dark:hover:bg-white/5 transition-colors text-left"
+            className="glass-card w-full p-5 flex items-center justify-between cursor-pointer hover:bg-white/60 transition-colors text-left"
           >
             <div className="flex items-center gap-4">
               <div className="bg-secondary-container/30 p-3 rounded-full">

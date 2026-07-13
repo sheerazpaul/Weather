@@ -12,20 +12,65 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-primary: 0 87 194;
+  --color-primary-container: 44 112 226;
+  --color-primary-fixed: 217 226 255;
+  --color-primary-fixed-dim: 175 198 255;
+  --color-on-primary: 255 255 255;
+  --color-on-primary-container: 254 252 255;
+  --color-on-primary-fixed: 0 26 67;
+  --color-on-primary-fixed-variant: 0 67 152;
+  --color-secondary: 0 102 134;
+  --color-secondary-container: 126 212 253;
+  --color-secondary-fixed: 192 232 255;
+  --color-secondary-fixed-dim: 123 209 250;
+  --color-on-secondary: 255 255 255;
+  --color-on-secondary-container: 0 91 120;
+  --color-on-secondary-fixed: 0 30 43;
+  --color-on-secondary-fixed-variant: 0 77 102;
+  --color-tertiary: 140 75 0;
+  --color-tertiary-container: 176 96 0;
+  --color-tertiary-fixed: 255 220 194;
+  --color-tertiary-fixed-dim: 255 183 123;
+  --color-on-tertiary: 255 255 255;
+  --color-on-tertiary-container: 255 251 255;
+  --color-on-tertiary-fixed: 46 21 0;
+  --color-on-tertiary-fixed-variant: 109 58 0;
+  --color-error: 186 26 26;
+  --color-error-container: 255 218 214;
+  --color-on-error: 255 255 255;
+  --color-on-error-container: 147 0 10;
+  --color-surface: 250 249 255;
+  --color-surface-dim: 216 217 227;
+  --color-surface-bright: 250 249 255;
+  --color-surface-container: 236 237 247;
+  --color-surface-container-low: 242 243 253;
+  --color-surface-container-high: 231 231 241;
+  --color-surface-container-highest: 225 226 236;
+  --color-surface-container-lowest: 255 255 255;
+  --color-surface-variant: 225 226 236;
+  --color-surface-tint: 0 89 198;
+  --color-on-surface: 25 27 34;
+  --color-on-surface-variant: 66 71 83;
+  --color-on-background: 25 27 34;
+  --color-inverse-surface: 46 48 56;
+  --color-inverse-on-surface: 239 240 250;
+  --color-inverse-primary: 175 198 255;
+  --color-outline: 114 119 133;
+  --color-outline-variant: 194 198 214;
+  --color-background: 250 249 255;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  background-color: #faf9ff;
-  color: #191b22;
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-on-background));
   transition: background-color 0.3s ease, color 0.3s ease;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-html.dark body {
-  background-color: #2e3038;
-  color: #eff0fa;
 }
 
 /* ============================================
@@ -40,12 +85,6 @@ html.dark body {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
 }
 
-html.dark .glass {
-  background: rgba(46, 48, 56, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
-}
-
 .glass-card {
   background: rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(20px);
@@ -56,19 +95,9 @@ html.dark .glass {
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-html.dark .glass-card {
-  background: rgba(46, 48, 56, 0.55);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
-}
-
 .glass-card:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
-}
-
-html.dark .glass-card:hover {
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
 }
 
 .glass-dark {
@@ -76,11 +105,6 @@ html.dark .glass-card:hover {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-html.dark .glass-dark {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 /* ============================================
@@ -94,10 +118,6 @@ html.dark .glass-dark {
 .hover-lift:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
-}
-
-html.dark .hover-lift:hover {
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
 }
 
 /* ============================================
@@ -140,7 +160,7 @@ html.dark .hover-lift:hover {
   background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.5);
-  color: #191b22;
+  color: rgb(var(--color-on-surface));
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
@@ -150,16 +170,6 @@ html.dark .hover-lift:hover {
 .btn-ghost:hover {
   background: rgba(255, 255, 255, 0.6);
   transform: translateY(-1px);
-}
-
-html.dark .btn-ghost {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #eff0fa;
-}
-
-html.dark .btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.12);
 }
 
 /* ============================================
@@ -191,13 +201,6 @@ html.dark .btn-ghost:hover {
   background-clip: text;
 }
 
-html.dark .weather-text-gradient {
-  background: linear-gradient(135deg, #afc6ff 0%, #7bd1fa 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 /* ============================================
    BACKGROUND MESH
    ============================================ */
@@ -207,13 +210,6 @@ html.dark .weather-text-gradient {
     radial-gradient(circle at 0% 0%, #d9e2ff 0%, transparent 50%),
     radial-gradient(circle at 100% 100%, #c0e8ff 0%, transparent 50%),
     radial-gradient(circle at 50% 50%, #faf9ff 0%, transparent 100%);
-}
-
-html.dark .weather-mesh {
-  background:
-    radial-gradient(circle at 0% 0%, rgba(0, 87, 194, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 100% 100%, rgba(0, 102, 134, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(46, 48, 56, 1) 0%, transparent 100%);
 }
 
 /* ============================================
@@ -274,7 +270,7 @@ html.dark .weather-mesh {
   left: 50%;
   width: 0;
   height: 2px;
-  background: #0057c2;
+  background: rgb(var(--color-primary));
   transition: width 0.3s ease, left 0.3s ease;
 }
 
@@ -317,22 +313,22 @@ input:checked ~ .toggle-dot {
 
 .chip-primary {
   background: rgba(0, 87, 194, 0.1);
-  color: #0057c2;
+  color: rgb(var(--color-primary));
 }
 
 .chip-secondary {
   background: rgba(0, 102, 134, 0.1);
-  color: #006686;
+  color: rgb(var(--color-secondary));
 }
 
 .chip-tertiary {
   background: rgba(140, 75, 0, 0.1);
-  color: #8c4b00;
+  color: rgb(var(--color-tertiary));
 }
 
 .chip-error {
   background: rgba(186, 26, 26, 0.1);
-  color: #ba1a1a;
+  color: rgb(var(--color-error));
 }
 
 /* ============================================

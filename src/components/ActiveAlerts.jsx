@@ -21,7 +21,7 @@ const ALERTS = [
     id: 3,
     icon: 'visibility',
     color: 'text-secondary',
-    borderColor: 'border-secondary-container',
+    borderColor: 'border-secondary',
     time: '3 HOURS AGO',
     title: 'Dense Fog Advisory',
     description: 'Reduced visibility on coastal highways until sunrise tomorrow.',

@@ -41,7 +41,7 @@ export default function WeatherDetails() {
           <span className="text-xl font-bold">{d.value}</span>
         </div>
       ))}
-      <div className="col-span-2 mt-3 p-5 rounded-2xl bg-primary/5 dark:bg-primary/10 flex items-center justify-between border border-primary/10">
+      <div className="col-span-2 mt-3 p-5 rounded-2xl bg-primary/5 flex items-center justify-between border border-primary/10">
         <div className="flex items-center gap-4">
           <div className="w-11 h-11 rounded-full bg-primary flex items-center justify-center text-white">
             <span className="material-symbols-outlined">visibility</span>

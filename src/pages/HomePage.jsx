@@ -17,12 +17,12 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="flex flex-col items-center text-center mb-10">
+      <section className="flex flex-col items-center mb-10 text-center">
         <SearchBar />
-        <h1 className="text-4xl md:text-6xl font-bold mb-3 tracking-tight text-on-surface">
+        <h1 className="mb-3 text-4xl font-bold tracking-tight text-primary md:text-6xl">
           {getGreeting()}, {weather?.name || 'World'}
         </h1>
-        <p className="text-xl text-on-surface-variant max-w-xl mx-auto">
+        <p className="max-w-xl mx-auto text-xl text-on-surface-variant">
           {weather
             ? `${weather.weather[0].description.charAt(0).toUpperCase() + weather.weather[0].description.slice(1)} with visibility of ${(weather.visibility / 1000).toFixed(0)} km.`
             : 'Search for a city to see the weather.'}
@@ -31,18 +31,18 @@ export default function HomePage() {
 
       {loading && (
         <div className="flex justify-center py-20">
-          <div className="w-14 h-14 border-4 border-primary/20 border-t-primary rounded-full animate-spin" />
+          <div className="border-4 rounded-full w-14 h-14 border-primary/20 border-t-primary animate-spin" />
         </div>
       )}
 
       {error && (
-        <div className="text-center py-12">
-          <p className="text-error text-xl">{error}</p>
+        <div className="py-12 text-center">
+          <p className="text-xl text-error">{error}</p>
         </div>
       )}
 
       {weather && !loading && (
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-12">
           <HeroWeatherCard />
           <WeatherDetails />
           <HourlyForecast />

@@ -9,13 +9,13 @@ export default function MapSection() {
         />
       </div>
       <div className="absolute top-6 left-6 z-10 flex flex-col gap-3">
-        <button className="glass-card p-3 rounded-2xl flex items-center justify-center bg-white/80 dark:bg-inverse-surface/80">
+        <button className="glass-card p-3 rounded-2xl flex items-center justify-center bg-white/80">
           <span className="material-symbols-outlined">add</span>
         </button>
-        <button className="glass-card p-3 rounded-2xl flex items-center justify-center bg-white/80 dark:bg-inverse-surface/80">
+        <button className="glass-card p-3 rounded-2xl flex items-center justify-center bg-white/80">
           <span className="material-symbols-outlined">remove</span>
         </button>
-        <button className="glass-card p-3 rounded-2xl flex items-center justify-center bg-white/80 dark:bg-inverse-surface/80">
+        <button className="glass-card p-3 rounded-2xl flex items-center justify-center bg-white/80">
           <span className="material-symbols-outlined">my_location</span>
         </button>
       </div>

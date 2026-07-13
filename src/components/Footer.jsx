@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <footer className="bg-surface-container-low dark:bg-surface-dim rounded-t-[32px] mt-10 transition-colors">
+    <footer className="bg-surface-container-low rounded-t-[32px] mt-10 transition-colors">
       <div className="flex flex-col md:flex-row justify-between items-center px-5 md:px-12 py-10 max-w-[1440px] mx-auto w-full">
         <div className="mb-6 md:mb-0 text-center md:text-left">
           <div className="text-2xl font-bold text-on-surface tracking-tight">AetherWeather</div>

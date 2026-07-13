@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { useTheme } from '../context/ThemeContext';
 
 export default function Navbar() {
-  const { dark, toggleTheme } = useTheme();
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
 
@@ -11,15 +9,14 @@ export default function Navbar() {
     { to: '/', label: 'Home' },
     { to: '/forecast', label: 'Forecast' },
     { to: '/alerts', label: 'Alerts' },
-
   ];
 
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 w-full z-50 glass border-b border-white/20 shadow-[0_10px_40px_rgba(0,0,0,0.08)]">
-      <div className="flex justify-between items-center px-5 md:px-12 py-5 max-w-[1440px] mx-auto">
-        <Link to="/" className="text-2xl font-bold text-primary dark:text-primary-fixed-dim tracking-tight">
+    <nav className="fixed top-3 left-3 right-3 md:left-6 md:right-6 z-50 glass rounded-full shadow-[0_10px_40px_rgba(0,0,0,0.08)]">
+      <div className="flex justify-between items-center px-5 md:px-8 py-3 max-w-[1440px] mx-auto">
+        <Link to="/" className="text-2xl font-bold text-primary tracking-tight">
           AetherWeather
         </Link>
 
@@ -30,8 +27,8 @@ export default function Navbar() {
               to={link.to}
               className={`nav-link text-sm font-medium tracking-wide transition-colors duration-300 ${
                 isActive(link.to)
-                  ? 'text-primary dark:text-primary-fixed-dim nav-link-active'
-                  : 'text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim'
+                  ? 'text-primary nav-link-active'
+                  : 'text-on-surface-variant hover:text-primary'
               }`}
             >
               {link.label}
@@ -40,15 +37,6 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-3">
-          <button
-            onClick={toggleTheme}
-            className="p-2.5 rounded-full hover:bg-surface-container-high/50 dark:hover:bg-white/10 transition-colors"
-          >
-            <span className="material-symbols-outlined text-primary dark:text-primary-fixed-dim">
-              {dark ? 'light_mode' : 'dark_mode'}
-            </span>
-          </button>
-
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden p-2.5 rounded-full hover:bg-surface-container-high/50 transition-colors"

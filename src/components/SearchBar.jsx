@@ -14,10 +14,10 @@ export default function SearchBar() {
   };
 
   return (
-    <div className="w-full max-w-2xl mb-10 relative group">
+    <div className="relative w-full max-w-2xl mb-10 group">
       <form onSubmit={handleSubmit}>
-        <div className="absolute inset-y-0 left-5 flex items-center pointer-events-none">
-          <span className="material-symbols-outlined text-on-surface-variant">search</span>
+        <div className="absolute inset-y-0 flex items-center pointer-events-none left-5">
+          <span className="text-white material-symbols-outlined">search</span>
         </div>
         <input
           type="text"

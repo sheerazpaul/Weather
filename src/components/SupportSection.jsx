@@ -13,7 +13,7 @@ export default function SupportSection() {
         </div>
         <div className="glass-card p-8 space-y-5 text-center hover-lift">
           <div className="bg-tertiary-container w-20 h-20 rounded-3xl flex items-center justify-center mx-auto">
-            <span className="material-symbols-outlined text-on-tertiater-container">lightbulb</span>
+            <span className="material-symbols-outlined text-on-tertiary-container">lightbulb</span>
           </div>
           <h3 className="text-xl font-bold">Suggest Feature</h3>
           <p className="text-on-surface-variant leading-relaxed">Have an idea? We'd love to hear how to make Aether better.</p>

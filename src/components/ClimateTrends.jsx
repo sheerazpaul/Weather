@@ -28,7 +28,7 @@ export default function ClimateTrends() {
               onClick={() => setActiveTab(tab)}
               className={`px-5 py-1.5 rounded-full text-sm font-medium transition-all ${
                 activeTab === tab
-                  ? 'bg-white dark:bg-surface shadow-sm text-primary font-semibold'
+                  ? 'bg-white shadow-sm text-primary font-semibold'
                   : 'text-on-surface-variant hover:text-on-surface'
               }`}
             >
